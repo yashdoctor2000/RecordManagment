@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewData["Title"] = "EaterLogin";
+    Layout = "~/Views/Shared/_EaterLayout.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $('input[type=text]').blur(function (e) {
+            this.style.background = "white";
+        });
+    });
+    $(function () {
+        $('input[type=text]').focus(function (e) {
+            this.style.background = "yellow";
+        });
+    });
+
+    $(function () {
+        $('input[type=password]').blur(function (e) {
+            this.style.background = "white";
+        });
+    });
+    $(function () {
+        $('input[type=password]').focus(function (e) {
+            this.style.background = "yellow";
+        });
+    });
+
+    $(function () {
+        $("input[type=text]").first().focus();      
+    });
+</script>
+
+    <table style="width:100%">
+        <tr>
+            <td style="font-family:'Arial Rounded MT'; font-size:30px; color:green; text-align:right;">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:65%"></td>
+                        <td style="text-align:center;">
+                            <table style="width:100%;">
+                                <tr style="height:40px;">
+                                    <td colspan="3" style="text-align:center; font-family:Arial; font-size:35px; background-color:yellow; color:red;">
+                                        Login
+                                    </td>
+                                </tr>
+                                <tr style="height:15px;">
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+                                    <td width="30px" style="text-align:left; font-family:Arial; font-size:15px; font-weight:bold; color:blue;">
+                                        Email-Id
+                                    </td>
+                                    <td width="30px" style="text-align:left; font-family:Arial; font-size:15px; font-weight:bold; color:blue;">
+                                        :
+                                    </td>
+                                    <td style="text-align:left;" class="btn">
+                                        <input type="text" id="email" name="name" />    
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="80px" style="text-align:left; font-family:Arial; font-size:15px; font-weight:bold; color:blue;">
+                                        Password
+                                    </td>
+                                    <td width="30px" style="text-align:left; font-family:Arial; font-size:15px; font-weight:bold; color:blue;">
+                                        :
+                                    </td>
+                                    <td style="text-align:left;" class="btn">
+                                        <input type="password" id="passwd" name="passwd" />
+                                    </td>
+                                </tr>
+                                <tr style="height:5px;">
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="text-align:left;">                                   
+                                        <input type="submit" id="submit" value="Login" style="color:blue; font-size:10px; width:70px;" />
+                                        &nbsp;
+                                        <input id="btnBookMe" type="button" value="Book Me" style="color:blue; font-size:10px; width:70px;" onclick="@("window.location.href='" + @Url.Action("EaterBookMe", "Eater","Eater") + "'");" />
+                                    </td>
+                                </tr>
+                                <tr style="height:5px;">
+                                    <td colspan="3"></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3" style="text-align:left; color:yellow; font-size:10px; background-color:green;">
+                                        <div>
+                                            <a href=@Url.Action("EaterChangePassword","Eater")>Change Password</a>>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr style="height:10px;">
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align:left; color:darkgreen; font-size:10px; background-color:yellow;">
+
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>

@@ -1,0 +1,101 @@
+﻿
+@{
+    Layout = null; 
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_EaterLayout</title>
+    <link href="~/css/eatercss/eatercss.css" rel="stylesheet"/>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    @*table-I*@
+        <table style="width:100%">
+            <tr>
+                <td>
+                    @*table-II*@
+                    <table style="width:100%">
+                        <tr>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr style="height:5px">
+                            <td colspan="2" style="background-color:gray"></td>
+                        </tr>
+
+                        <tr style="height:25px">
+                            <td colspan="2" style="background-color:gray;">
+                            @*Table-III Menu*@
+                                <table>
+                                    <tr>
+                                        <td style="text-align:center;  width:100px;">
+                                            <a href="/Eater/EaterHome">Home</a>
+                                            
+                                        </td>
+                                        <td style="text-align:center; width:100px;">
+                                            <a href=@Url.Action("EaterLogin","Eater")>Login</a>
+                                            
+                                        </td>
+                                        <td style="text-align:center; width:100px;">
+                                            <a href=@Url.Action("EaterAboutUs","Eater")>About Us</a>
+                                        </td>
+                                        <td style="text-align:center; width:100px;">
+                                            <a href="/Eater/EaterHelp">Help</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:left; font-family:'AR HERMANN'; font-size:60px; color:deeppink; ">
+                                Bhukkhad
+                            </td>
+                            <td style="width:200px; height:100px; vertical-align:bottom; ">
+                                <img  width="200" height="100" 
+                                src="~/images/eaterimages/FoodThali.jpg"/>
+                            </td>
+                        </tr>
+                        <tr style="height:5px">
+                            <td colspan="2" style="background-color:deeppink;"></td>
+                        </tr>
+                        <tr style="height:5px;background-color:deeppink; ">
+                            <td colspan="2">
+                                @*Table IV (Contact- Info)*@
+                                <table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+                                    <tr>
+                                        <td style="color:white;  text-align:left; font-family :'Arial Rounded MT';">
+                                            Contact us on <a href="tel:+917405916963">+91 7405916963</a> or <a href="mailto:yashdoctor2000@gmail.com">yashdoctor2000@gmail.com</a>
+                                        </td>
+                                        <td style="text-align:right; width:200px; font-family:'AR HERMANN';  ">
+                                            <a href="@Url.Action("EaterBookme", "Eater")" style="color:yellow;">Book Me</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                @*Table-V (View)*@
+                                <table style="width:100%">
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                @RenderBody() @*==>	Renders the content of child view in layout pages.*@                                               
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>

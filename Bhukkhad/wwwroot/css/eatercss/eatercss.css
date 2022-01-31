@@ -1,0 +1,42 @@
+﻿.text {
+    font-family: Arial;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+
+a {
+    color: silver;
+    text-decoration: overline;
+}
+
+    a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: yellow;
+        text-decoration: line-through;
+    }
+
+.txtbx {
+    font-family: Arial;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 150px;
+}
+
+.btn {
+    font-family: Arial;
+    font-size: 10px;
+    color: red;
+    font-weight: bold;
+    width: 70px;
+}
